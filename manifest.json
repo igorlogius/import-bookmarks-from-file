@@ -1,0 +1,15 @@
+{
+  "author": "igorlogius",
+  "background": {
+	"scripts": ["background.js"]
+  },
+  "icons": {
+  },
+  "manifest_version": 2,
+  "name": "Import Bookmarks from File",
+  "permissions": [
+    "menus",
+    "bookmarks"
+  ],
+  "version": "1.0.0"
+}
