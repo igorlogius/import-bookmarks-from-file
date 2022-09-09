@@ -2,7 +2,7 @@
 
 const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b[-a-zA-Z0-9()@:%_\+.~#?&//=]*/gm;
 const folders = document.getElementById('folders');
-const status = document.getElementById('status');
+const result = document.getElementById('status');
 
 let impbtn;
 
@@ -34,7 +34,7 @@ async function importData(bookmarkId, data){
                 }
 			});
         }
-        status.innerText = 'Done. Created ' + count + ' Bookmarks';
+        result.innerText = 'Done. Created ' + count + ' Bookmarks';
 }
 
 function recGetFolders(node, depth = 0){
@@ -90,7 +90,7 @@ async function onLoad() {
                 importData(folders.value, data);
             } catch (e) {
                 console.error(e);
-                status.innerText = 'Import failed!' + e;
+                result.innerText = 'Import failed!' + e;
             }
         };
         reader.readAsText(file);

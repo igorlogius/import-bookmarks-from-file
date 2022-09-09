@@ -1,8 +1,8 @@
 /* global browser */
 
-browser.browserAction.onClicked.addListener((tab) => {
+browser.browserAction.onClicked.addListener( () => {
     browser.windows.create({
-        url: ["popup.html"],
+        url: ["dialog.html"],
         type: "popup",
         width: 300,
         height: 250
